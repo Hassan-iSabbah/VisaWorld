@@ -129,7 +129,25 @@
 
 
 
+    <script>
+        $(document).ready(function () {
+            $("#navbar").fadeToggle(4000);
+            setTimeout(() => {
+                $("#spanWinter").slideToggle(400);
 
+            }, 900);
+            setTimeout(() => {
+                $("#hLabel").toggle(600);
+
+            }, 1200);
+
+
+            $("#btnNavbarToggler").click(function () {
+                $("#navmenu").toggle(300);
+            });
+        });
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 
