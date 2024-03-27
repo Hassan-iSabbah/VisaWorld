@@ -7,6 +7,36 @@
     <title>VisaWorld</title>
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                // Calculate the percentage scrolled
+                var scrollPercentage = (($(window).scrollTop() / ($(document).height() - $(window).height())) * 100);
+
+                // Check if the user has scrolled more than 20%
+                if (scrollPercentage > 20) {
+                    $("#navbar").hide(400);
+                } else {
+                    $("#navbar").show(400);
+                }
+            });
+
+            aboutUsCovers = ["airport 1.jpg","airport 2.jpg","camera.jpg","china.jpg","world 1.jpg"];
+            index = 0;
+            setInterval(() => {
+
+                $("#aboutusImage").attr("src", "img/" + aboutUsCovers[index]);
+                index++
+                if (index > aboutUsCovers.length - 1) {
+                    index = 0;
+                }
+            }, 5000);
+        });
+
+
+    </script>
 </head>
 
 <body>
@@ -26,7 +56,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="index.php#aboutUs" class="nav-link text-light">About us</a></li>
-                    <li class="nav-item"><a href="map.php" class="nav-link text-light">Map</a></li>
+                    <li class="nav-item"><a href="map.html" class="nav-link text-light">Map</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link text-light">Account</a></li>
                     <li class="nav-item"><a href="merch.html" class="nav-link text-light">Visa</a></li>
                     <!-- <li class="nav-item"><a href="account.html" class="nav-link text-light">Account</a></li> -->
@@ -54,7 +84,7 @@
     <div class="container-fluid">
         <div class="row py-5">
             <div class="col-md-6">
-                <img id="aboutUs" src="./img/airport 1.jpg" class="img-fluid" alt="">
+                <img id="aboutusImage" src="./img/airport 1.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-md-6">
                 <h2>About Us</h2>
