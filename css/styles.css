@@ -1,0 +1,326 @@
+@font-face {
+    font-family: 'Aquire';
+    src: url('Aquire-BW0ox.otf');
+}
+
+@font-face {
+    font-family: 'normal';
+    src: url('Cartesian-4B576.ttf');
+}
+
+
+@font-face {
+    font-family: 'cursive';
+    src: url('HousttelySignature-GOonZ.ttf');
+}
+
+.cursive{
+    font-family: 'cursive';
+}
+
+@font-face {
+    font-family: 'p';
+    src: url('Cartesian-4B576.ttf');
+}
+
+@font-face {
+    font-family: 'btn';
+    src: url('Monotes-EaRqg.ttf');
+}
+
+@font-face {
+    font-family: 'form';
+    src: url('Cartesian-4B576.ttf');
+}
+
+@font-face {
+    font-family: 'sid';
+    src: url('./GrotleyRegular-mLEWv.otf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'sid';
+}
+
+
+
+body {
+    min-height: 100vh;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 600px;
+    letter-spacing: 2.6px;
+}
+
+body::after {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/tower.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(40%);
+    z-index: -1;
+}
+
+#aboutus {
+    min-height: 50vh;
+    position: relative;
+}
+
+#aboutus::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/aboutus.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px) brightness(10%);
+    z-index: -1;
+}
+
+#article {
+    min-height: 30vh;
+    position: relative;
+}
+
+#article::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/article.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px) brightness(10%);
+    z-index: -1;
+}
+
+#article img {
+    border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+}
+
+
+#artist_one {
+    min-height: 30vh;
+    position: relative;
+}
+
+#artist_one::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/article.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(40%);
+    z-index: -1;
+}
+
+#artist_one iframe {
+    width: 100%;
+    height: 28vh;
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #770606;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 12%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#footer svg {
+    width: 32px;
+    height: 32px;
+}
+
+.hide {
+    display: none;
+}
+
+.artist {
+    filter: brightness(60%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2%;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+
+.video {
+    max-width: 80vw;
+    max-height: 100vh;
+}
+
+.crossOut {
+    text-decoration: line-through;
+}
+
+#btnNavbarToggler {
+    position: fixed;
+    top: 5vh;
+    right: 10vw;
+}
+
+#navbar {
+    position: fixed;
+}
+
+#navbar::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a08800d;
+    filter: blur(2px);
+}
+
+/* For medium and larger devices */
+@media (min-width: 800px) {
+    .steps {
+        position: relative;
+    }
+
+    .steps .container {
+        position: absolute;
+        padding-bottom: -5vh;
+        z-index: 11;
+        border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+    }
+}
+
+.socialBlock{
+    max-width: 50px;
+}
+
+.socialBlock:hover{
+    scale: 1.2 ;
+}
+
+/* Crop Bad Images */
+
+.cropHoodie{
+    background-clip: content-box;
+    background-position: center;
+    object-fit: cover;
+    width: 30vw;
+    height: 60vh;
+}
+
+
+/* EGG */
+
+.egg {
+    border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+    animation: borderAnimation 12s infinite; /* Duration: 12 seconds (6 keyframes * 2 seconds each) */
+    animation-timing-function: ease-in-out; /* Smooth animation */
+    transform: scale(1.02); /* Initial zoom */
+  }
+  
+  .egg-0 {
+    border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+    animation: borderAnimation 6s infinite; /* Duration: 12 seconds (6 keyframes * 2 seconds each) */
+    animation-timing-function: ease-in-out; /* Smooth animation */
+    transform: scale(1.02); /* Initial zoom */
+  }
+
+  .egg-1 {
+    border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+    animation: borderAnimation 18s infinite; /* Duration: 12 seconds (6 keyframes * 2 seconds each) */
+    animation-timing-function: ease-in-out; /* Smooth animation */
+    transform: scale(1.02); /* Initial zoom */
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+      transform: scale(1.02) rotate(0deg); /* Initial zoom and no rotation */
+    }
+    16.66% {
+      border-radius: 54% 46% 80% 20% / 20% 63% 37% 80%;
+      transform: scale(1.02) rotate(2deg); /* Rotate slightly */
+    }
+    33.33% {
+      border-radius: 65% 35% 82% 18% / 36% 70% 30% 64%;
+      transform: scale(1.02) rotate(-2deg); /* Rotate slightly */
+    }
+    50% {
+      border-radius: 27% 73% 90% 10% / 19% 83% 17% 81%;
+      transform: scale(1.02) rotate(1deg); /* Rotate slightly */
+    }
+    66.66% {
+      border-radius: 93% 7% 95% 5% / 7% 94% 6% 93%;
+      transform: scale(1.02) rotate(-1deg); /* Rotate slightly */
+    }
+    83.33% {
+      border-radius: 100% 0% 100% 0% / 0% 100% 0% 100%;
+      transform: scale(1.02) rotate(0deg); /* Back to no rotation */
+    }
+    100% {
+      border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%; /* Back to the start */
+      transform: scale(1.02) rotate(0deg); /* Back to no rotation */
+    }
+  }
+
+
+#aboutUs{
+    width: 100vw;
+    height: 95vh;
+    background-position: center;
+    background-clip: content-box;
+    object-fit: cover;
+}
